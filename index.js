@@ -1,6 +1,6 @@
 'use strict';
 
-var Promise = require('bluebird');
+// var Promise = require('bluebird');
 var gulp = require('gulp');
 var versionBump = require('./lib/bump');
 var versionTag = require('./lib/tag');

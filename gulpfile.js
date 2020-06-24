@@ -3,5 +3,5 @@ var gulp = require('gulp')
 var pkg = require('./package.json')
 gulp.task(
   'push',
-  require('./index')(pkg.version)
+  require('./index')({ currentVer: pkg.version })
 )
