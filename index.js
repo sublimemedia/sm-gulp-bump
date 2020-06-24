@@ -7,31 +7,33 @@ var versionTag = require('./lib/tag');
 var gitCommit = require('./lib/git-commit');
 var gitPush = require('./lib/git-push');
 
-exports = module.exports = function (currentVer, logger) {
-  var log = logger || console;
+exports = module.exports = function (opts) {
+  if (!opts || typeof opts !== 'object') opts = {}
+  if (typeof opts.currentVer === 'undefined') opts.currentVer = 'Not supplied';
+  if (typeof opts.logger === 'undefined') opts.logger = console;
   var verBumped = false;
   var push = function (done) {
-    return versionBump(gulp, currentVer, log)
+    return versionBump(gulp, opts.currentVer, opts.logger)
       .then(function (bumped){
         verBumped = bumped
-        return gitCommit(log, verBumped, currentVer)
+        return gitCommit(opts.logger, verBumped, opts.currentVer)
       })
       .then(function () {
         if (verBumped) {
-          return versionTag(gulp, log);
+          return versionTag(gulp, opts.logger);
         } else {
           return Promise.resolve(false);
         }
       })
       .then(function () {
-        return gitPush(verBumped, log);
+        return gitPush(opts.logger);
       })
       .then(function () {
         done();
         return null;
       })
       .catch(function (err) {
-        log.error(err);
+        opts.logger.error(err);
         done();
       });
   };
