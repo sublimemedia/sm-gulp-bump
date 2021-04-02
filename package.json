@@ -1,10 +1,11 @@
 {
   "name": "sm-gulp-bump",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "utility to bump version of aps courses and push to git",
   "main": "index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "dist": "dist"
   },
   "scripts": {
     "start": "gulp push",
