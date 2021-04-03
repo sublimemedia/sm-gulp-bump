@@ -1,6 +1,6 @@
 {
   "name": "sm-gulp-bump",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "utility to bump version of aps courses and push to git",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "gulp push",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node postinstall/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/sublimemedia/sm-gulp-bump-aps#readme",
   "dependencies": {
     "bluebird": "^3.5.5",
+    "gently-copy": "^3.2.0",
     "gulp": "^4.0.2",
     "gulp-bump": "^3.1.3",
     "gulp-filter": "^6.0.0",
@@ -30,5 +32,19 @@
     "gulp-tag-version": "^1.3.1",
     "inquirer": "^6.3.1",
     "node-powershell": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-prettier-standard": "^4.0.1",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-vue": "^7.8.0",
+    "prettier": "2.2.1",
+    "prettier-config-standard": "^4.0.0"
   }
 }

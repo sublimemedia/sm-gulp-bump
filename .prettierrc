@@ -1,0 +1,10 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*vue.txt",
+      "options": { "parser": "vue" }
+    }
+  ]
+}
