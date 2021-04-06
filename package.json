@@ -12,7 +12,7 @@
     "push": "gulp push",
     "test": "echo \"Error: no test specified\" && exit 1",
     "xpostinstall": "cd postinstall/ && node index.js",
-    "postinstall": "echo 'postinstall starting' && node postinstall/index.js"
+    "postinstall": "echo 'postinstall starting' && cross-env-shell node postinstall/index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/sublimemedia/sm-gulp-bump-aps#readme",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "gently-copy": "^3.2.0",
     "gulp": "^4.0.2",
     "gulp-bump": "^3.1.3",
