@@ -12,7 +12,7 @@
     "push": "gulp push",
     "test": "echo \"Error: no test specified\" && exit 1",
     "xpostinstall": "cd postinstall/ && node index.js",
-    "postinstall": "echo 'postinstall starting' && cross-env-shell node postinstall/index.js"
+    "postinstall": "cross-env-shell START_PATH=$INIT_CWD && echo 'postinstall starting' && echo $INIT_CWD && node postinstall/index.js"
   },
   "repository": {
     "type": "git",
