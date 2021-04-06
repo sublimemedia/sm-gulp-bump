@@ -7,10 +7,12 @@ console.log('Running postinstall for sm-gulp-bump...')
 
 // User's local directory
 const userPath = process.env.INIT_CWD
-const pkgPath = path.join(userPath, '/package.json')
-const pkg = require(pkgPath)
-pkg.scripts.push = 'gulp push'
-fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
-console.log(filesToCopy, userPath)
-// Moving files to user's local directory
-gentlyCopy(filesToCopy, userPath, { overwrite: true })
+const rootPath = process.env.CWD
+const pkgPath = path.join(userPath, '../package.json')
+console.log('userPath', userPath, 'rootPath', rootPath, 'pkgPath', pkgPath)
+// const pkg = require(pkgPath)
+// pkg.scripts.push = 'gulp push'
+// fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
+// console.log(filesToCopy, userPath)
+// // Moving files to user's local directory
+// gentlyCopy(filesToCopy, userPath, { overwrite: true })
