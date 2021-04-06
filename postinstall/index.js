@@ -10,9 +10,9 @@ const userPath = process.env.INIT_CWD
 const rootPath = process.env.CWD
 const pkgPath = path.join(userPath, '../package.json')
 console.log('userPath', userPath, 'rootPath', rootPath, 'pkgPath', pkgPath)
-// const pkg = require(pkgPath)
-// pkg.scripts.push = 'gulp push'
-// fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
+const pkg = require(pkgPath)
+pkg.scripts.push = 'gulp push'
+fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
 // console.log(filesToCopy, userPath)
 // // Moving files to user's local directory
 // gentlyCopy(filesToCopy, userPath, { overwrite: true })
