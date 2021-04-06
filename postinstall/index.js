@@ -13,7 +13,7 @@ console.log('userPath', userPath, 'rootPath', rootPath, 'pkgPath', pkgPath)
 console.log(__dirname)
 console.log(process.cwd())
 console.log(process.env.PWD)
-// const pkg = require(pkgPath)
+const pkg = require(pkgPath)
 // pkg.scripts.push = 'gulp push'
 // fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
 // console.log(filesToCopy, userPath)
