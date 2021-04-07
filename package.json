@@ -1,6 +1,6 @@
 {
   "name": "sm-gulp-bump",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "utility to bump version of aps courses and push to git",
   "main": "index.js",
   "directories": {
@@ -10,9 +10,7 @@
   "scripts": {
     "start": "npm run push",
     "push": "gulp push",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "xpostinstall": "cd postinstall/ && node index.js",
-    "postinstall": "cross-env-shell START_PATH=%INIT_CWD% && echo postinstall starting && echo %INIT_CWD% && echo %npm_lifecycle_event% && cd postinstall/ && node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
