@@ -1,6 +1,6 @@
 {
   "name": "sm-gulp-bump",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "utility to bump version of aps courses and push to git",
   "main": "index.js",
   "directories": {
@@ -35,6 +35,9 @@
     "remote-origin-url": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
@@ -45,7 +48,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-vue": "^7.8.0",
-    "prettier": "2.2.1",
+    "prettier": "^2.2.1",
     "prettier-config-standard": "^4.0.0"
   }
 }
